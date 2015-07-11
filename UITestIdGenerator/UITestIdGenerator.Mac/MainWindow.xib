@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
+            <connections>
+                <outlet property="window" destination="2" id="6"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="UITest Magic" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="2" customClass="MainWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="74" width="646" height="354"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="3" customClass="DragDropView">
+                <rect key="frame" x="0.0" y="0.0" width="646" height="354"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                        <rect key="frame" x="18" y="292" width="610" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drag &amp; drop .storyboard or .xib files into this window" id="8">
+                            <font key="font" metaFont="system" size="18"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsD-F7-4bU">
+                        <rect key="frame" x="18" y="30" width="610" height="238"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="dzW-5x-olN">
+                            <font key="font" metaFont="smallSystem"/>
+                            <mutableString key="title">When a .storyboard or .xib file is dropped into this window, the app does two things:
+
+1) Populates the accessibilityIdentifier or accessibilityLabel property on all the "interactive" UI elements in file with a descriptive unique identifier.
+
+2) Generates a file named UIElements.cs that lists all of the identifiers to use when writing your UITests.  UIElements.cs is saved in the same directory as the .storyboard or .xib file.
+
+To use UIElements.cs, simply include it in your UITest project.  You can immediately use it to query an UIElement in the .storyboard or .xib.
+
+For example, if the storyboard has a subclass of UIViewController named LoginViewController with a child UIButton titled "Login".  You'd query the login button with: 
+
+app.Query(x =&gt; x.Marked(UIElements.LoginViewController.button_login));
+
+(with Intellisense of course)</mutableString>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" constant="20" id="9dr-Xu-2Zu"/>
+                    <constraint firstItem="7" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="Kb2-b6-JWi"/>
+                    <constraint firstAttribute="trailing" secondItem="bsD-F7-4bU" secondAttribute="trailing" constant="20" id="Lxv-ub-snb"/>
+                    <constraint firstItem="bsD-F7-4bU" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="MPQ-JR-dOI"/>
+                    <constraint firstItem="7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="40" id="OU6-D9-TVT"/>
+                    <constraint firstAttribute="bottom" secondItem="bsD-F7-4bU" secondAttribute="bottom" constant="30" id="epD-h2-4ij"/>
+                    <constraint firstItem="bsD-F7-4bU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7" secondAttribute="bottom" id="nCP-7Z-V30"/>
+                </constraints>
+            </view>
+        </window>
+    </objects>
+</document>

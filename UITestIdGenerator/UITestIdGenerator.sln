@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestIdGenerator.AddIn", "UITestIdGenerator\UITestIdGenerator.AddIn.csproj", "{933FB009-14EE-48F9-B7CA-F4C03D8C0968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestIdGenerator.Mac", "UITestIdGenerator.Mac\UITestIdGenerator.Mac.csproj", "{E82D0396-BBAE-4103-8DFD-98A52BD93616}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{933FB009-14EE-48F9-B7CA-F4C03D8C0968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933FB009-14EE-48F9-B7CA-F4C03D8C0968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933FB009-14EE-48F9-B7CA-F4C03D8C0968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933FB009-14EE-48F9-B7CA-F4C03D8C0968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82D0396-BBAE-4103-8DFD-98A52BD93616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82D0396-BBAE-4103-8DFD-98A52BD93616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82D0396-BBAE-4103-8DFD-98A52BD93616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82D0396-BBAE-4103-8DFD-98A52BD93616}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
